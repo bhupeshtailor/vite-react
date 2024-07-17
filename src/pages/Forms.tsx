@@ -3,18 +3,21 @@ import styles from "../my-style.module.css";
 
 function Forms(props: any) {
   const [inputs, setInputs] = useState({
+    username: "",
+    age: "",
     description: "",
+    car: "",
   });
 
   // setInputs({username:"", age: "", description: ""})
 
-  const handleChange = (event) => {
+  const handleChange = (event: any) => {
     const name = event.target.name;
     const value = event.target.value;
     setInputs((values) => ({ ...values, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: any) => {
     event.preventDefault();
     console.log(inputs);
   };
